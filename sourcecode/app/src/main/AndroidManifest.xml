@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.x.digdos" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.x.digdos.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.NewUser"
+            android:label="@string/title_activity_new_user"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.DeleteUser"
+            android:label="@string/title_activity_delete_user"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.SafetyQuestion"
+            android:label="@string/title_activity_safety_question"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.UserMenu"
+            android:label="@string/title_activity_user_menu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.AddImage"
+            android:label="@string/title_activity_add_image"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.AddSound"
+            android:label="@string/title_activity_add_sound"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.AddRepeat"
+            android:label="@string/title_activity_add_repeat"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.AlarmManagerActivity"
+            android:label="@string/title_activity_alarm_manager"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.DeleteAllUsers"
+            android:label="@string/title_activity_delete_all_users"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.ReminderActivity"
+            android:label="@string/title_activity_reminder"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.UserSettings"
+            android:label="@string/title_activity_user_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.x.digdos.PublicSettings"
+            android:label="@string/title_activity_public_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

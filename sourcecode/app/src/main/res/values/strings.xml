@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DigDos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_new_user">NewUser</string>
+    <string name="title_activity_user_settings">UserSettings</string>
+    <string name="title_activity_new_medicine">NewMedicine</string>
+    <string name="title_activity_edit_medicine">EditMedicine</string>
+    <string name="title_activity_new_notification">NewNotification</string>
+    <string name="title_activity_edit_notification">EditNotification</string>
+    <string name="title_activity_update">UpdateActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_delete_user">DeleteUser</string>
+    <string name="title_activity_alarm_manager_with">AlarmManagerWithActivity</string>
+    <string name="title_activity_private_settings">PrivateSettings</string>
+    <string name="title_activity_safety_question">SafetyQuestion</string>
+    <string name="title_activity_user_menu">UserMenu</string>
+    <string name="title_activity_new_medicine_image">NewMedicineImage</string>
+    <string name="title_activity_new_medicine_sound">NewMedicineSound</string>
+    <string name="title_activity_new_medicine_repeat">NewMedicineRepeat</string>
+    <string name="title_activity_edit_medicine_image">EditMedicineImage</string>
+    <string name="title_activity_edit_medicine_sound">EditMedicineSound</string>
+    <string name="title_activity_edit_medicine_repeat">EditMedicineRepeat</string>
+    <string name="title_activity_add_image">AddImage</string>
+    <string name="title_activity_add_sound">AddSound</string>
+    <string name="title_activity_add_repeat">AddRepeat</string>
+    <string name="title_activity_admin_settings">AdminSettings</string>
+    <string name="title_activity_alarm_manager">AlarmManagerActivity</string>
+    <string name="title_activity_alarm_manager_controls">AlarmManagerControls</string>
+    <string name="title_activity_delete_all_users">DeleteAllUsers</string>
+    <string name="title_activity_reminder">Reminder</string>
+    <string name="title_activity_public_settings">PublicSettings</string>
+
+</resources>

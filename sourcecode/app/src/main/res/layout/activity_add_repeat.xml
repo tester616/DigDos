@@ -1,0 +1,340 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.x.digdos.AddRepeat">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat on"
+            android:id="@+id/repeatCheckBox"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="repeatCheckBox" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat mode"
+            android:id="@+id/repeatModeRadioGroup"
+            android:layout_below="@+id/repeatCheckBox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Repeat mode"
+                android:id="@+id/repeatModeTextView" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periodical"
+                android:id="@+id/periodicalRadioButton"
+                android:onClick="periodicalRadioButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom"
+                android:id="@+id/customRadioButton"
+                android:onClick="customRadioButton" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Periodical"
+            android:textSize="25sp"
+            android:id="@+id/periodicalTextView"
+            android:layout_below="@+id/repeatModeRadioGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat every"
+            android:textSize="15sp"
+            android:id="@+id/repeatTextView"
+            android:layout_below="@+id/periodicalTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/repeatFrequencyEditText"
+            android:inputType="number"
+            android:layout_toEndOf="@+id/repeatTextView"
+            android:layout_below="@+id/periodicalTextView"
+            android:layout_toRightOf="@+id/repeatTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/repeatFrequencySpinner"
+            android:layout_toEndOf="@+id/repeatFrequencyEditText"
+            android:layout_below="@+id/periodicalTextView"
+            android:layout_toRightOf="@+id/repeatFrequencyEditText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Until"
+            android:textSize="15sp"
+            android:id="@+id/repeatEndTextView"
+            android:layout_below="@+id/repeatFrequencySpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/endDayEditText"
+            android:layout_below="@+id/repeatFrequencySpinner"
+            android:layout_toRightOf="@+id/repeatEndTextView"
+            android:layout_toEndOf="@+id/repeatEndTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/endDayMonthDotTextView"
+            android:layout_alignTop="@+id/endDayEditText"
+            android:layout_toRightOf="@+id/endDayEditText"
+            android:layout_toEndOf="@+id/endDayEditText"/>
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/endMonthEditText"
+            android:layout_alignTop="@+id/endDayEditText"
+            android:layout_toRightOf="@+id/endDayMonthDotTextView"
+            android:layout_toEndOf="@+id/endDayMonthDotTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/endMonthYearDotTextView"
+            android:layout_alignTop="@+id/endDayEditText"
+            android:layout_toRightOf="@+id/endMonthEditText"
+            android:layout_toEndOf="@+id/endMonthEditText" />
+
+        <EditText
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/endYearEditText"
+            android:layout_alignTop="@+id/endDayEditText"
+            android:layout_toRightOf="@+id/endMonthYearDotTextView"
+            android:layout_toEndOf="@+id/endMonthYearDotTextView" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/endHourEditText"
+            android:layout_below="@+id/endDayEditText"
+            android:layout_alignLeft="@+id/endDayEditText"
+            android:layout_alignStart="@+id/endDayEditText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="30sp"
+            android:id="@+id/endHourMinuteColonTextView"
+            android:layout_alignTop="@+id/endHourEditText"
+            android:layout_toRightOf="@+id/endHourEditText"
+            android:layout_toEndOf="@+id/endHourEditText" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/endMinuteEditText"
+            android:layout_alignTop="@+id/endHourMinuteColonTextView"
+            android:layout_toRightOf="@+id/endHourMinuteColonTextView"
+            android:layout_toEndOf="@+id/endHourMinuteColonTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom"
+            android:textSize="25sp"
+            android:id="@+id/customTextView"
+            android:layout_below="@+id/endHourEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/dayEditText"
+            android:layout_below="@+id/customTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/dayMonthDotTextView"
+            android:layout_alignTop="@+id/dayEditText"
+            android:layout_toRightOf="@+id/dayEditText"
+            android:layout_toEndOf="@+id/dayEditText"/>
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/monthEditText"
+            android:layout_alignTop="@+id/dayEditText"
+            android:layout_toRightOf="@+id/dayMonthDotTextView"
+            android:layout_toEndOf="@+id/dayMonthDotTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/monthYearDotTextView"
+            android:layout_alignTop="@+id/dayEditText"
+            android:layout_toRightOf="@+id/monthEditText"
+            android:layout_toEndOf="@+id/monthEditText" />
+
+        <EditText
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/yearEditText"
+            android:layout_alignTop="@+id/dayEditText"
+            android:layout_toRightOf="@+id/monthYearDotTextView"
+            android:layout_toEndOf="@+id/monthYearDotTextView" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/hourEditText"
+            android:layout_below="@+id/dayEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="30sp"
+            android:id="@+id/hourMinuteColonTextView"
+            android:layout_alignTop="@+id/hourEditText"
+            android:layout_toRightOf="@+id/hourEditText"
+            android:layout_toEndOf="@+id/hourEditText" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/minuteEditText"
+            android:layout_alignTop="@+id/hourMinuteColonTextView"
+            android:layout_toRightOf="@+id/hourMinuteColonTextView"
+            android:layout_toEndOf="@+id/hourMinuteColonTextView" />
+
+        <EditText
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/locationEditText"
+            android:layout_below="@+id/hourMinuteColonTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/addButton"
+            android:layout_alignTop="@+id/locationEditText"
+            android:layout_toRightOf="@+id/locationEditText"
+            android:layout_toEndOf="@+id/locationEditText"
+            android:onClick="addButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/removeButton"
+            android:layout_below="@+id/addButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="removeButton" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customRepeatSpinner"
+            android:layout_alignTop="@+id/removeButton"
+            android:layout_toRightOf="@+id/removeButton"
+            android:layout_toEndOf="@+id/removeButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use"
+            android:id="@+id/useButton"
+            android:layout_below="@+id/customRepeatSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp"
+            android:onClick="useButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/backButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="backButton" />
+    </RelativeLayout>
+</ScrollView>

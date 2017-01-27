@@ -1,0 +1,255 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.x.digdos.ReminderActivity">
+
+        <RadioGroup
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/typeRadioGroup"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Type"
+                android:id="@+id/typeTextView" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                android:id="@+id/medicineRadioButton"
+                android:onClick="typeOrModeRadioButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:id="@+id/notificationRadioButton"
+                android:onClick="typeOrModeRadioButton" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/modeRadioGroup"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/typeRadioGroup"
+            android:layout_toEndOf="@+id/typeRadioGroup">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Mode"
+                android:id="@+id/modeTextView" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:id="@+id/newRadioButton"
+                android:onClick="typeOrModeRadioButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:id="@+id/editRadioButton"
+                android:onClick="typeOrModeRadioButton" />
+        </RadioGroup>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/reminderSpinner"
+            android:layout_below="@+id/typeRadioGroup"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameEditText"
+            android:hint="Name"
+            android:layout_below="@+id/reminderSpinner"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteEditText"
+            android:hint="Main text"
+            android:layout_below="@+id/nameEditText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activation date and time"
+            android:textSize="20sp"
+            android:id="@+id/alertDateAndTimeTextView"
+            android:layout_below="@+id/noteEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dayEditText"
+            android:inputType="number"
+            android:layout_below="@+id/alertDateAndTimeTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/dayMonthDotTextView"
+            android:layout_toRightOf="@+id/dayEditText"
+            android:layout_toEndOf="@+id/dayEditText"
+            android:layout_below="@+id/alertDateAndTimeTextView"/>
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/monthEditText"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/dayMonthDotTextView"
+            android:layout_toEndOf="@+id/dayMonthDotTextView"
+            android:layout_below="@+id/alertDateAndTimeTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="30sp"
+            android:id="@+id/monthYearDotTextView"
+            android:layout_toRightOf="@+id/monthEditText"
+            android:layout_toEndOf="@+id/monthEditText"
+            android:layout_below="@+id/alertDateAndTimeTextView"/>
+
+        <EditText
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/yearEditText"
+            android:inputType="number"
+            android:layout_toRightOf="@+id/monthYearDotTextView"
+            android:layout_toEndOf="@+id/monthYearDotTextView"
+            android:layout_below="@+id/alertDateAndTimeTextView"/>
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/hourEditText"
+            android:inputType="number"
+            android:layout_below="@+id/dayEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="30sp"
+            android:id="@+id/hourMinuteColonTextView"
+            android:layout_below="@+id/dayEditText"
+            android:layout_toRightOf="@+id/hourEditText"
+            android:layout_toEndOf="@+id/hourEditText"/>
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/minuteEditText"
+            android:inputType="number"
+            android:layout_below="@+id/dayEditText"
+            android:layout_toRightOf="@+id/hourMinuteColonTextView"
+            android:layout_toEndOf="@+id/hourMinuteColonTextView"/>
+
+        <EditText
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationEditText"
+            android:inputType="number"
+            android:hint="Location"
+            android:layout_below="@+id/hourEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add image"
+            android:id="@+id/addImageButton"
+            android:onClick="addImageButton"
+            android:layout_below="@+id/locationEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add sound"
+            android:id="@+id/addSoundButton"
+            android:onClick="addSoundButton"
+            android:layout_below="@+id/addImageButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add repeat"
+            android:id="@+id/addRepeatButton"
+            android:onClick="addRepeatButton"
+            android:layout_below="@+id/addSoundButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:onClick="saveButton"
+            android:layout_below="@+id/addRepeatButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/deleteButton"
+            android:onClick="deleteButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/backButton"
+            android:onClick="backButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</ScrollView>
