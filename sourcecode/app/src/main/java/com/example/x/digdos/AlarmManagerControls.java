@@ -6,9 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-/**
- * Created by rusty on 19.3.2015.
- */
+
 public class AlarmManagerControls
 {
     private Context ctx;

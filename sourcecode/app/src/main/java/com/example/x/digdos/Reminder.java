@@ -8,9 +8,6 @@ import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 
-/**
- * Created by rusty on 4.2.2015.
- */
 
 //Class for creating objects representing a created reminder.
 public class Reminder

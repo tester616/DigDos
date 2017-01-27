@@ -2,9 +2,7 @@ package com.example.x.digdos;
 
 import android.util.Log;
 
-/**
- * Created by rusty on 18.2.2015.
- */
+
 public class Language
 {
     //Language.

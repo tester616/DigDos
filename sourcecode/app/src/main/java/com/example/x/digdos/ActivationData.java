@@ -2,9 +2,6 @@ package com.example.x.digdos;
 
 import java.util.ArrayList;
 
-/**
- * Created by rusty on 24.3.2015.
- */
 public class ActivationData
 {
     private Moment activationMoment,

@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by rusty on 6.2.2015.
- */
 
 //Class with methods for checking if any reminders should be displayed.
 public class ActivationManagement

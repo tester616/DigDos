@@ -4,9 +4,6 @@ import android.widget.EditText;
 
 import org.joda.time.DateTime;
 
-/**
- * Created by rusty on 25.2.2015.
- */
 
 //Used to check whether or not a certain field filled by the user has bad information or not.
 public class FieldLimitation

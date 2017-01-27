@@ -3,9 +3,6 @@ package com.example.x.digdos;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by rusty on 2.4.2015.
- */
 
 //Class for global variables.
 public class GV

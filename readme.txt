@@ -1,0 +1,1 @@
+An application for Android that essentially functions as a calendar with some extra features by keeping track of reminders the user(s) create.
