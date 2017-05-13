@@ -2,18 +2,21 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.0"
-
-    defaultConfig {
-        applicationId "com.example.x.digdos"
-        minSdkVersion 14
-        targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
-    }
+    buildToolsVersion '25.0.0'
+    
     buildTypes {
+        defaultConfig {
+            applicationId "com.example.x.digdos"
+            minSdkVersion 14
+            targetSdkVersion 21
+            versionCode 1
+            versionName "1.0"
+        }
+
         release {
-            runProguard false
+            //runProguard false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
